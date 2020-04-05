@@ -2,55 +2,58 @@ import React from 'react';
 import logo from './assets/logo.png';
 import './App.css';
 
+function confirmEmail(value){
+
+}
+
 function App() {
   return (
     <div className="App">
-
-      <ul class="top">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="container">
-                <div class="row">
-                  <div class="col-6">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-12 padtop">
-                          <div class="container">
-                            <div class="row">
-                              <div class="col-3">
+      <ul className="top">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="container">
+                <div className="row">
+                  <div className="col-6">
+                    <div className="container">
+                      <div className="row">
+                        <div className="col-12 padtop">
+                          <div className="container">
+                            <div className="row">
+                              <div className="col-3">
                                 <li>
-                                  <img class="logotop" src={logo}
+                                  <img className="logotop" src={logo}
                                     alt="e-com club" height="40" />
                                 </li>
                               </div>
-                              <div class="col-1-5">
-                                <li class="button">
-                                  <a class="btop" href="Mulheres">
+                              <div className="col-1-5">
+                                <li className="button">
+                                  <a className="btop" href="Mulheres">
                                     <b>Mulheres</b>
                                   </a>
                                 </li>
                               </div>
-                              <div class="col-1-5">
-                                <li class="button">
-                                  <a class="btop" href="Homens">
+                              <div className="col-1-5">
+                                <li className="button">
+                                  <a className="btop" href="Homens">
                                     <b>Homens</b>
                                   </a>
                                 </li>
                               </div>
-                              <div class="col-1-5">
-                                <li class="button">
-                                  <a class="btop" href="Crianças">
+                              <div className="col-1-5">
+                                <li className="button">
+                                  <a className="btop" href="Crianças">
                                     <b>Crianças</b>
                                   </a>
                                 </li>
                               </div>
-                              <div class="col-0 marg3">
-                                <p class="bus">|</p>
+                              <div className="col-0 marg3">
+                                <p className="bus">|</p>
                               </div>
-                              <div class="col-1 btop">
-                                <li class="button">
-                                  <a class="btop bus fas fa-search fa-lg" href="Busca">
+                              <div className="col-1 btop">
+                                <li className="button">
+                                  <a className="btop bus fas fa-search fa-lg" href="Busca">
                                   </a>
                                 </li>
                               </div>
@@ -60,13 +63,13 @@ function App() {
                       </div>
                     </div>
                   </div>
-                  <div class="col-6 ">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-12 padtop1">
-                          <li class="car1">
-                            <a class="car1" href="Carrinho">
-                              <span class="car"> Carrinho / R$ 0.00</span>
+                  <div className="col-6 ">
+                    <div className="container">
+                      <div className="row">
+                        <div className="col-12 padtop1">
+                          <li className="car1">
+                            <a className="car1" href="Carrinho">
+                              <span className="car"> Carrinho / R$ 0.00</span>
                             </a>
                           </li>
                         </div>
@@ -79,57 +82,59 @@ function App() {
           </div>
         </div>
       </ul>
-      <p class="cad">
+      <p className="cad">
         Inicio >
         <span id="cadastro">Cadastrar</span>
       </p>
 
-      <div class="main row">
+      <div className="main row">
         <form action='#' id="form">
-          <div class="col-12">
-            <div class="container">
-              <div class="row teste alignr ">
-                <div class="col-6 col-sm-12 ">
-                  <div class="container">
-                    <div class="row ">
-                      <div class="col-12 padc margf">
-                        <label for="email">E-mail
-                                            <span class="red">*</span>
+          <div className="col-12">
+            <div className="container">
+              <div className="row teste alignr ">
+                <div className="col-6 col-sm-12 ">
+                  <div className="container">
+                    <div className="row ">
+                      <div className="col-12 padc margf">
+                        <label htmlFor="email">E-mail
+                                            <span className="red">*</span>
                                             :
                                         </label>
                         <input type="email" id="email" name="email" />
                       </div>
-                      <div class="col-12 margf">
-                        <label for="conEmail">Repetir e-mail
-                                            <span class="red">*
+                      <div className="col-12 margf">
+                        <label htmlFor="conEmail">Repetir e-mail
+                                            <span className="red">*
                                             </span>
                                             :
                                         </label>
-                        <input type="email" id="conEmail" name="conEmail" onblur="confirmEmail()" />
+                        <input type="email" id="conEmail" name="conEmail" onBlur={(e) => confirmEmail(e.target.value)} />
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-sm-12">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-12 padc margf">
-                        <label for="pass">Crie uma senha
-                                            <span class="red">*
+                <div className="col-6 col-sm-12">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-12 padc margf">
+                        <label htmlFor="pass">Crie uma senha
+                                            <span className="red">*
 
                                             </span>
                                             :
                                         </label>
                         <input type="password" id="pass" name="pass" />
                       </div>
-                      <div class="col-12 margf">
-                        <label for="conPass">Repetir senha
-                                            <span class="red">*
+                      <div className="col-12 margf">
+                        <label htmlFor="conPass">Repetir senha
+                                            <span className="red">*
 
                                             </span>
                                             :
                                         </label>
-                        <input type="password" id="conPass" name="conPass" onblur="confirmPass()" />
+                        <input type="password" id="conPass" name="conPass" 
+                        //onblur="confirmPass()"
+                         />
                       </div>
                     </div>
                   </div>
@@ -137,72 +142,77 @@ function App() {
               </div>
             </div>
           </div>
-          <div class="col-12">
-            <div class="container">
-              <div class="row">
-                <div class="col-6">
-                  <div class="container marg1">
+          <div className="col-12">
+            <div className="container">
+              <div className="row">
+                <div className="col-6">
+                  <div className="container marg1">
                     <p>Dados Cadastrais</p>
                   </div>
                 </div>
-                <div class="col-6">
-                  <div class="container marg2">
+                <div className="col-6">
+                  <div className="container marg2">
                     <p>Endereço de entrega</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-12">
-            <div class="container">
-              <div class="row">
-                <div class="col-6">
-                  <div class="container">
-                    <div class="row teste1">
-                      <div class="col-12 teste alignr margg">
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-12 pad">
+          <div className="col-12">
+            <div className="container">
+              <div className="row">
+                <div className="col-6">
+                  <div className="container">
+                    <div className="row teste1">
+                      <div className="col-12 teste alignr margg">
+                        <div className="container">
+                          <div className="row">
+                            <div className="col-12 pad">
                               <input type="radio" id="pfis" name="person" value="pfis" />
-                              <label for="pfis">Pessoa fisica</label>
+                              <label htmlFor="pfis">Pessoa fisica</label>
                               <input type="radio" id="pjur" name="person" value="pjur" />
-                              <label for="pjur">Pessoa Juridica</label>
+                              <label htmlFor="pjur">Pessoa Juridica</label>
                             </div>
-                            <div class="col-12 pad">
-                              <label for="nome">Nome<span class="red">*</span>:</label>
-                              <input type="text" id="nome" name="nome" ondrop="limpa(this.value);" onblur="validaNome();" />
+                            <div className="col-12 pad">
+                              <label htmlFor="nome">Nome<span className="red">*</span>:</label>
+                              <input type="text" id="nome" name="nome" //ondrop="limpa(this.value);" onblur="validaNome();" 
+                              />
                             </div>
-                            <div class="col-12 pad">
-                              <label for="snome">Sobrenome<span class="red">*</span>:</label>
+                            <div className="col-12 pad">
+                              <label htmlFor="snome">Sobrenome<span className="red">*</span>:</label>
                               <input type="text" id="snome" name="snome"
-                                onblur="validaSobrenome();" />
+                                //onblur="validaSobrenome();" 
+                                />
                             </div>
-                            <div class="col-12 pad">
-                              <label for="Sexo">Sexo:</label>
+                            <div className="col-12 pad">
+                              <label htmlFor="Sexo">Sexo:</label>
                               <select id="sexo">
                                 <option value="feme">Feminino</option>
                                 <option value="masc">Masculino</option>
                                 <option value="outr">Outro</option>
                               </select>
                             </div>
-                            <div class="col-12 pad">
-                              <label for="cpf">CPF<span class="red">*</span>:</label>
+                            <div className="col-12 pad">
+                              <label htmlFor="cpf">CPF<span className="red">*</span>:</label>
                               <input type="text" id="cpf" name="cpf"
-                                onkeyup="javascript: fMasc( this, mCPF );" maxlength="11"
-                                onblur="validaCpf();" />
+                                //onkeyup="javascript: fMasc( this, mCPF );" maxLength="11"
+                                //onblur="validaCpf();"
+                                 />
                             </div>
-                            <div class="col-12 pad">
-                              <label for="tel">Telefone<span class="red">*</span>:</label>
+                            <div className="col-12 pad">
+                              <label htmlFor="tel">Telefone<span className="red">*</span>:</label>
                               <input type="text" id="tel" name="tel"
-                                onkeyup="mascara( this, mascTel);" maxlength="15" />
+                                //onkeyup="mascara( this, mascTel);" 
+                                maxLength="15" />
                             </div>
-                            <div class="col-12 pad">
-                              <label for="cel">Celular:</label>
+                            <div className="col-12 pad">
+                              <label htmlFor="cel">Celular:</label>
                               <input type="text" id="cel" name="cel"
-                                onkeyup="mascara( this, mascTel);" maxlength="15" />
+                                //onkeyup="mascara( this, mascTel);" 
+                                maxLength="15" />
                             </div>
-                            <div class="col-12 pad">
-                              <label for="nasc">Nascimento<span class="red">*</span>:</label>
+                            <div className="col-12 pad">
+                              <label htmlFor="nasc">Nascimento<span className="red">*</span>:</label>
                               <input type="date" id="nasc" name="nasc" />
                             </div>
                           </div>
@@ -212,44 +222,45 @@ function App() {
                   </div>
                 </div>
 
-                <div class="col-6">
-                  <div class="container">
-                    <div class="row teste2">
-                      <div class="col-12 teste alignr margf">
-                        <div class="col-12 pad">
-                          <label for="cep">CEP:</label>
-                          <input type="text" id="cep" name="cep" onblur="buscaCep()" />
+                <div className="col-6">
+                  <div className="container">
+                    <div className="row teste2">
+                      <div className="col-12 teste alignr margf">
+                        <div className="col-12 pad">
+                          <label htmlFor="cep">CEP:</label>
+                          <input type="text" id="cep" name="cep" //onblur="buscaCep()"
+                           />
                         </div>
-                        <div class="col-12 pad">
-                          <label for="rua">Rua:</label>
+                        <div className="col-12 pad">
+                          <label htmlFor="rua">Rua:</label>
                           <input type="text" id="rua" name="rua" disabled />
                         </div>
-                        <div class="col-12 pad">
-                          <label for="num">Número:</label>
+                        <div className="col-12 pad">
+                          <label htmlFor="num">Número:</label>
                           <input type="text" id="num" name="num" disabled />
                         </div>
-                        <div class="col-12 pad">
+                        <div className="col-12 pad">
                           <input type="checkbox" id="nonum" name="nonum" value="nonum" disabled />
-                          <label for="nonum"> Sem Numero.</label>
+                          <label htmlFor="nonum"> Sem Numero.</label>
                         </div>
-                        <div class="col-12 pad">
-                          <label for="comp">Complemento:</label>
+                        <div className="col-12 pad">
+                          <label htmlFor="comp">Complemento:</label>
                           <input type="text" id="comp" name="comp" disabled />
                         </div>
-                        <div class="col-12 pad">
-                          <label for="ref">Referencia:</label>
+                        <div className="col-12 pad">
+                          <label htmlFor="ref">Referencia:</label>
                           <input type="text" id="ref" name="ref" disabled />
                         </div>
-                        <div class="col-12 pad">
-                          <label for="bai">Bairro:</label>
+                        <div className="col-12 pad">
+                          <label htmlFor="bai">Bairro:</label>
                           <input type="text" id="bai" name="bai" disabled />
                         </div>
-                        <div class="col-12 pad">
-                          <label for="city">Cidade:</label>
+                        <div className="col-12 pad">
+                          <label htmlFor="city">Cidade:</label>
                           <input type="text" id="city" name="city" disabled />
                         </div>
-                        <div class="col-12 pad">
-                          <label for="est">Estado:</label>
+                        <div className="col-12 pad">
+                          <label htmlFor="est">Estado:</label>
                           <input type="text" id="est" name="est" disabled />
                         </div>
                       </div>
@@ -259,14 +270,15 @@ function App() {
               </div>
             </div>
 
-            <div class="container">
-              <div class="row">
-                <div class="col-12 teste1">
-                  <p><span class="red">*</span>&ThinSpace;-&ThinSpace;Campos Obrigatorios</p>
-                  <input type="checkbox" id="remail" name="remail" value="remail" checked="checked" />
-                  <label for="remail"> Recever ofertas e novidade por e-mail.</label>
+            <div className="container">
+              <div className="row">
+                <div className="col-12 teste1">
+                  <p><span className="red">*</span>&ThinSpace;-&ThinSpace;Campos Obrigatorios</p>
+                  <input type="checkbox" id="remail" name="remail" value="remail" //checked="checked"
+                   />
+                  <label htmlFor="remail"> Recever ofertas e novidade por e-mail.</label>
                 </div>
-                <div class="col-12 sub">
+                <div className="col-12 sub">
                   <input type="submit" value="Cadastrar >" />
                 </div>
               </div>
